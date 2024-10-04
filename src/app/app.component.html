@@ -1,0 +1,25 @@
+<div>
+  <h1>Train Seat Reservation</h1>
+  <input
+    type="number"
+    [(ngModel)]="seatCount"
+    min="1"
+    max="7"
+    placeholder="Enter number of seats to book"
+  />
+  <button (click)="reserveSeats()">Reserve Seats</button>
+
+  <div class="seat-layout">
+    <div
+      *ngFor="let seat of seats; let i = index"
+      [style.color]="seat ? 'red' : 'green'"
+    >
+      {{ seat ? 'X' : i + 1 }}
+    </div>
+  </div>
+
+  <div>
+    <h2>Booked Seats:</h2>
+    <p>{{ bookedSeats.join(', ') }}</p>
+  </div>
+</div>

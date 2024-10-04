@@ -1,0 +1,16 @@
+p {
+  font-family: Lato;
+}
+.seat-layout {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 seats per row */
+  gap: 5px;
+}
+
+.seat-layout div {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid black;
+  line-height: 30px; /* Center text vertically */
+}
